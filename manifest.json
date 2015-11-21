@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "__MSG_extName__",
-  "description": "__MSG_extDescription__",
-  "author": "Hashim Mansoor",
-  "version": "12.9.9",
+  "name": "YouTube Downloader",
+  "description": "Download YouTube videos with different video quality: 1080P, 720P, 480P, 360p etc. Supports all formats.",
+  "author": "Pinei",
+  "version": "1.0.0",
 
   "default_locale": "en",
 
@@ -18,17 +18,14 @@
       "Content/mono.js",
 	  "Content/background.js",
       "Content/utils.js",
-      "Content/youtube_com_embed.js",
-      "Content/Youtube_app.js",
-      "Content/bookmark.js"
+      "Content/youtube_com_embed.js"
     ],
     "persistent": true
   },
 
-  "permissions": ["webRequest","webRequestBlocking","tabs","storage","http://*/*","https://*/*","notifications","bookmarks"],
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-  "options_page":"Content/updates.html",
-  "homepage_url":"http://addoncrop.com/youtube_video_downloader",
+  "permissions": ["webRequest","webRequestBlocking","tabs","storage","http://*/*","https://*/*","notifications"],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "homepage_url":"https://github.com/pinei/youtube-downloader",
 
   "content_scripts": [
     {
@@ -38,17 +35,6 @@
 	  "Content/youtube_com.js"],
       "run_at": "document_end",
       "all_frames": true
-    },
-    {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["Content/jquery.js","Content/script.js"],
-      "run_at": "document_end"
-    },
-	{
-"matches" : [ "http://*/*", "https://*/*" ],
-"js" : [ "Content/http_extend.js" ],
-"run_at" : "document_idle",
-"all_frames" : false
-} 
+    }
   ]
 }

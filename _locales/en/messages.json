@@ -9,7 +9,7 @@
 
  "download": {"message": "Download"},
  "downloadTitle": {"message": "Click the link while holding Alt/Option or Ctrl key to download the file | Or use Right click SAVE LINK AS"},
- "noLinksFound": {"message": "No links were found | IF Stop working please Update extension from Addoncrop.Com"},
+ "noLinksFound": {"message": "No links were found"},
  "more": {"message": "More"},
  "close": {"message": "Close"},
  "kbps": {"message": "kbps"},
